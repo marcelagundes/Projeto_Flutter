@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intro_views_flutter/intro_views_flutter.dart';
-import 'package:loginsignup/pages/aboutDetails.dart';
-import 'package:loginsignup/utils/menu.dart';
+import '../utils/menu.dart';
+import 'aboutDetails.dart';
 
 class AboutIndex extends StatelessWidget {
   const AboutIndex({Key? key}) : super(key: key);

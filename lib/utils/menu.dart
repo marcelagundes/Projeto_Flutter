@@ -1,15 +1,18 @@
+import 'package:app06_task_list/pages/cadastro_plantas.dart';
+import 'package:app06_task_list/pages/minhas_plantas_page.dart';
+import 'package:app06_task_list/pages/tarefas_principal_page.dart';
+import 'package:app06_task_list/pages/tarefas_page.dart';
 import 'package:flutter/material.dart';
-import 'package:loginsignup/pages/aboutIndex.dart';
-import 'package:loginsignup/pages/myPlants.dart';
 
-import '../login/signin.dart';
+import '../pages/aboutIndex.dart';
+import '../pages/login_page.dart';
 
 class MenuWidget extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
   @override
   Widget build(BuildContext context) {
     final email = 'marcelagundes@gmail.com';
-    final urlImage = 'assets/images/marcela.png';
+    final urlImage = 'assets/imagens/marcela.png';
 
     return Drawer(
       child: Material(
@@ -27,7 +30,6 @@ class MenuWidget extends StatelessWidget {
               child: Column(
                 children: [
                   const SizedBox(height: 12),
-                  buildSearchField(),
                   const SizedBox(height: 24),
                   buildMenuItem(
                     text: 'Sobre',
@@ -37,15 +39,27 @@ class MenuWidget extends StatelessWidget {
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Minhas Plantas',
-                    icon: Icons.library_add,
+                    icon: Icons.emoji_nature,
                     onClicked: () => selectedItem(context, 1),
+                  ),
+                  const SizedBox(height: 16),
+                  buildMenuItem(
+                    text: 'Cadastro de Plantas',
+                    icon: Icons.nature,
+                    onClicked: () => selectedItem(context, 2),
+                  ),
+                  const SizedBox(height: 16),
+                  buildMenuItem(
+                    text: 'Tarefas',
+                    icon: Icons.nature_people,
+                    onClicked: () => selectedItem(context, 3),
                   ),
                   const SizedBox(height: 16),
                   Divider(color: Colors.white70),
                   buildMenuItem(
                     text: 'Sair',
                     icon: Icons.exit_to_app,
-                    onClicked: () => selectedItem(context, 2),
+                    onClicked: () => selectedItem(context, 4),
                   ),
                 ],
               ),
@@ -85,30 +99,6 @@ class MenuWidget extends StatelessWidget {
         ),
       );
 
-  Widget buildSearchField() {
-    final color = Colors.white;
-
-    return TextField(
-      style: TextStyle(color: color),
-      decoration: InputDecoration(
-        contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-        hintText: 'Pesquisar',
-        hintStyle: TextStyle(color: color),
-        prefixIcon: Icon(Icons.search, color: color),
-        filled: true,
-        fillColor: Colors.white12,
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(5),
-          borderSide: BorderSide(color: color.withOpacity(0.7)),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(5),
-          borderSide: BorderSide(color: color.withOpacity(0.7)),
-        ),
-      ),
-    );
-  }
-
   Widget buildMenuItem({
     required String text,
     required IconData icon,
@@ -136,12 +126,23 @@ class MenuWidget extends StatelessWidget {
         break;
       case 1:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => const MyPlants(),
+          builder: (context) => const MinhasPlantasPage(),
         ));
         break;
       case 2:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => const Signin(),
+          builder: (context) => const CadastrarPlantas(),
+        ));
+        break;
+      case 3:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => const TarefasPrincipalPage(),
+        ));
+        break;
+
+      case 4:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => const LoginPage(),
         ));
         break;
     }

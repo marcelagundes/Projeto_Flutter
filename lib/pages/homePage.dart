@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:loginsignup/utils/colors.dart';
-import 'package:loginsignup/utils/menu.dart';
+import '../utils/colors.dart';
+import '../utils/menu.dart';
 import 'package:lottie/lottie.dart';
 
 Future main() async {

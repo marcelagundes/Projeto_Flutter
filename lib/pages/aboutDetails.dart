@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:intro_views_flutter/intro_views_flutter.dart';
-import 'package:loginsignup/pages/aboutIndex.dart';
 
 final pages = [
   PageViewModel(
       pageColor: const Color(0xFF03A9F4),
       //  bubble: CachedNetworkImage(imageUrl: firstImageIcon),
-      iconImageAssetPath: 'assets/images/lirio.png',
+      iconImageAssetPath: '/imagens/lirio.png',
       body: const Text(
           'O objetivo do aplicativo seria catalogação e aprendizado sobre tipos de plantas encontradas no mundo.'),
       title: const Text(
@@ -14,7 +13,7 @@ final pages = [
       ),
       textStyle: const TextStyle(fontFamily: 'MyFont', color: Colors.white),
       mainImage: Image.asset(
-        'assets/images/lirio.png',
+        '/imagens/lirio.png',
         height: 400.0,
         width: 400.0,
         alignment: Alignment.center,
@@ -22,13 +21,13 @@ final pages = [
   PageViewModel(
     pageColor: const Color(0xFF8BC34A),
     // bubble: CachedNetworkImage(imageUrl: secondImageIcon),
-    iconImageAssetPath: 'assets/images/flor.png',
+    iconImageAssetPath: '/imagens/flor.png',
 
     body: const Text(
         'Também ajudamos você quando estiver com dúvidas de como cuidar da sua plantinha   '),
     title: const Text('Cuidados com as plantas'),
     mainImage: Image.asset(
-      'assets/images/flor.png',
+      '/imagens/flor.png',
       height: 400.0,
       width: 400.0,
       alignment: Alignment.center,
@@ -38,12 +37,12 @@ final pages = [
   PageViewModel(
     pageColor: const Color(0xFF607D8B),
     //bubble: CachedNetworkImage(imageUrl: thirdImageIcon),
-    iconImageAssetPath: 'assets/images/brotos.png',
+    iconImageAssetPath: '/imagens/brotos.png',
     body: const Text(
         'A Desenvolvedora responsavel pelo aplicativo Marcela Jorge Fagundes'),
     title: const Text('Desensenvolvedor'),
     mainImage: Image.asset(
-      'assets/images/marcela.png',
+      '/imagens/marcela.png',
       height: 400.0,
       width: 400.0,
       alignment: Alignment.center,
