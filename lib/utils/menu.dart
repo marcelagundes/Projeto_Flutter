@@ -38,13 +38,13 @@ class MenuWidget extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Minhas Plantas',
+                    text: 'Cadastro de Plantas',
                     icon: Icons.emoji_nature,
                     onClicked: () => selectedItem(context, 1),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Cadastro de Plantas',
+                    text: 'Minhas Plantas',
                     icon: Icons.nature,
                     onClicked: () => selectedItem(context, 2),
                   ),
@@ -126,12 +126,12 @@ class MenuWidget extends StatelessWidget {
         break;
       case 1:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => const MinhasPlantasPage(),
+          builder: (context) => const CadastrarPlantas(),
         ));
         break;
       case 2:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => const CadastrarPlantas(),
+          builder: (context) => const MinhasPlantasPage(),
         ));
         break;
       case 3:
