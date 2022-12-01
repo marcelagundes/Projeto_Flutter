@@ -11,7 +11,7 @@ import '../pages/util.dart';
 
 class PlantasController {
   listarTudo() {
-    return FirebaseFirestore.instance.collection('plantas');
+    return FirebaseFirestore.instance.collection('plantas').orderBy('nome');
   }
 
   void CadastrarPlantas(context, nome, especie, cientifico) {
